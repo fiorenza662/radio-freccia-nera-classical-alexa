@@ -1,6 +1,7 @@
 'use strict';
 const Alexa=require('ask-sdk-core');
-const STREAM='';
+// TEMPORARY TEST STREAM ONLY — remove before certification/publication.
+const STREAM='https://stream.srg-ssr.ch/srgssr/rsc_de/mp3/128';
 const ART='https://www.radiofreccianera.com/wp-content/themes/radio-freccia-nera-thematic-network-en-v2.2/assets/img/cards-pro/classical.png';
 const isIT=h=>(Alexa.getLocale(h.requestEnvelope)||'en-GB').toLowerCase().startsWith('it');
 function play(h){if(!STREAM)return h.responseBuilder.speak(isIT(h)?'Questo canale sarà disponibile a breve.':'This channel will be available soon.').withShouldEndSession(true).getResponse();const title=isIT(h)?'Radio Freccia Nera Classica':'Radio Freccia Nera Classical';const intro=isIT(h)?'Radio Freccia Nera Classica.':'Radio Freccia Nera Classical.';return h.responseBuilder.speak(intro).addDirective({type:'AudioPlayer.Play',playBehavior:'REPLACE_ALL',audioItem:{stream:{url:STREAM,token:'rfn-classical-'+Date.now(),offsetInMilliseconds:0},metadata:{title,subtitle:'Radio Freccia Nera',art:{sources:[{url:ART}]},backgroundImage:{sources:[{url:ART}]}}}}).withShouldEndSession(true).getResponse();}
