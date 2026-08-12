@@ -1,1 +1,40 @@
-{"manifest":{"manifestVersion":"1.0","publishingInformation":{"isAvailableWorldwide":false,"distributionCountries":["GB","IT"],"category":"MUSIC_AND_AUDIO_ACCESSORIES","locales":{"en-GB":{"name":"Radio Freccia Nera Classical","summary":"Listen to Radio Freccia Nera Classical live on Alexa.","description":"Listen to Radio Freccia Nera Classical live on Alexa. The station starts automatically when the skill is opened.","examplePhrases":["Alexa, open Freccia Nera Classical","Alexa, ask Freccia Nera Classical to start the radio","Alexa, ask Freccia Nera Classical to play the radio"],"keywords":["Radio Freccia Nera","radio","music","classical"]},"it-IT":{"name":"Radio Freccia Nera Classica","summary":"Ascolta Radio Freccia Nera Classica in diretta su Alexa.","description":"Ascolta Radio Freccia Nera Classica in diretta su Alexa. La stazione parte automaticamente quando apri la skill.","examplePhrases":["Alexa, apri Freccia Nera Classica","Alexa, chiedi a Freccia Nera Classica di avviare la radio","Alexa, chiedi a Freccia Nera Classica di riprodurre la radio"],"keywords":["Radio Freccia Nera","radio","musica","classica"]}}},"apis":{"custom":{"endpoint":{"sourceDir":"lambda"},"interfaces":[{"type":"AUDIO_PLAYER"}]}}}}
+{
+  "manifest": {
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "isAvailableWorldwide": false,
+      "distributionCountries": ["GB", "IT"],
+      "category": "MUSIC_AND_AUDIO_ACCESSORIES",
+      "locales": {
+        "en-GB": {
+          "name": "Radio Freccia Nera Classical",
+          "summary": "Listen to Radio Freccia Nera Classical live on Alexa.",
+          "description": "Listen to Radio Freccia Nera Classical live on Alexa. The station opens directly from the skill. To start, say: Alexa, open Black Arrow Classical.",
+          "examplePhrases": [
+            "Alexa, open Black Arrow Classical.",
+            "Alexa, ask Black Arrow Classical to start the radio.",
+            "Alexa, ask Black Arrow Classical to play the radio."
+          ],
+          "keywords": ["Radio Freccia Nera", "radio", "music", "classical"]
+        },
+        "it-IT": {
+          "name": "Radio Freccia Nera Classica",
+          "summary": "Ascolta Radio Freccia Nera Classica in diretta su Alexa.",
+          "description": "Ascolta Radio Freccia Nera Classica in diretta su Alexa. Per iniziare, dì: Alexa, apri Freccia Nera Classica.",
+          "examplePhrases": [
+            "Alexa, apri Freccia Nera Classica.",
+            "Alexa, chiedi a Freccia Nera Classica di avviare la radio.",
+            "Alexa, chiedi a Freccia Nera Classica di riprodurre la radio."
+          ],
+          "keywords": ["Radio Freccia Nera", "radio", "musica", "classica"]
+        }
+      }
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {"sourceDir": "lambda"},
+        "interfaces": [{"type": "AUDIO_PLAYER"}]
+      }
+    }
+  }
+}
